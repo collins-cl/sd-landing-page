@@ -1,6 +1,7 @@
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Inter } from "next/font/google";
+import { siteUrl, siteName, siteTitle, siteDescription } from "@/lib/site";
 import "./globals.scss";
 
 const inter = Inter({
@@ -9,9 +10,25 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "SkillDuel — Prove you know it.",
-  description:
-    "SkillDuel turns curiosity into a game. Challenge anyone to a five-question duel on any topic in the world — chess-clock tight, Duolingo satisfying.",
+  metadataBase: new URL(siteUrl),
+  title: siteTitle,
+  description: siteDescription,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: siteTitle,
+    description: siteDescription,
+    url: "/",
+    siteName,
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteTitle,
+    description: siteDescription,
+  },
 };
 
 export default function RootLayout({ children }) {
