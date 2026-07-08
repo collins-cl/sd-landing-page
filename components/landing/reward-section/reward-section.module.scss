@@ -1,0 +1,54 @@
+@use "../shared" as *;
+
+// "The reward" editorial section — §7.6. Plain background for rhythm
+// alternation; phone left / copy right on desktop, copy first on mobile.
+
+.section {
+  padding-block: 80px;
+
+  @include md {
+    padding-block: 112px;
+  }
+}
+
+.inner {
+  @include container;
+  display: grid;
+  align-items: center;
+  gap: 56px;
+
+  @include md {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+}
+
+.copy {
+  @include md {
+    order: 2;
+  }
+}
+
+.overline {
+  @include overline;
+}
+
+.title {
+  @include section-h2;
+  margin-top: 16px;
+}
+
+.lead {
+  @include lead;
+  margin-top: 24px;
+}
+
+.phone {
+  justify-self: center;
+  width: 100%;
+  max-width: 320px;
+
+  @include md {
+    order: 1;
+  }
+}

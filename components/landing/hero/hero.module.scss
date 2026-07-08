@@ -1,0 +1,135 @@
+@use "../shared" as *;
+
+// Hero — §7.2. Oversized two-tone H1, one primary + one secondary CTA,
+// three-phone device cluster fanned below.
+
+.section {
+  padding-top: 64px;
+  padding-bottom: 32px;
+
+  @include md {
+    padding-top: 96px;
+    padding-bottom: 48px;
+  }
+}
+
+.inner {
+  @include container;
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  padding: 8px 16px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--muted-foreground);
+}
+
+.pulseDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--primary);
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.title {
+  margin-top: 28px;
+  font-size: 44px;
+  line-height: 1.02;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+
+  @include md {
+    font-size: 88px;
+    line-height: 0.98;
+  }
+}
+
+// Second line in muted-foreground for calm counterweight (§4).
+.titleMuted {
+  display: block;
+  color: var(--muted-foreground);
+}
+
+.lead {
+  @include lead;
+  margin-top: 28px;
+}
+
+.ctaRow {
+  margin-top: 36px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.stage {
+  position: relative;
+  margin-top: 56px;
+  height: 520px;
+
+  @include md {
+    margin-top: 80px;
+    height: 720px;
+  }
+}
+
+.phoneLeft {
+  position: absolute;
+  left: 0;
+  top: 64px;
+  width: 52%;
+
+  @include md {
+    left: 7%;
+    width: 26%;
+  }
+}
+
+.phoneCenter {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  z-index: 10;
+  width: 62%;
+
+  @include md {
+    width: 30%;
+  }
+}
+
+.phoneRight {
+  position: absolute;
+  right: 0;
+  top: 64px;
+  width: 52%;
+
+  @include md {
+    right: 7%;
+    width: 26%;
+  }
+}

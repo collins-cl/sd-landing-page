@@ -1,0 +1,81 @@
+@use "../shared" as *;
+
+// "The mechanics" feature grid — §7.4. 2×2 grid where 1px gaps on a
+// border-tinted backdrop form the gutters, clipped by a rounded container.
+
+.section {
+  padding-block: 80px;
+
+  @include md {
+    padding-block: 112px;
+  }
+}
+
+.inner {
+  @include container;
+}
+
+.overline {
+  @include overline;
+}
+
+.title {
+  @include section-h2;
+  margin-top: 16px;
+  max-width: 48rem;
+}
+
+.grid {
+  margin-top: 48px;
+  overflow: hidden;
+  border-radius: 24px;
+  border: 1px solid var(--border-60);
+  background: var(--border-60);
+
+  @include md {
+    margin-top: 64px;
+  }
+}
+
+.cells {
+  display: grid;
+  gap: 1px;
+
+  @include md {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.cell {
+  background: var(--card);
+  padding: 32px;
+
+  @include md {
+    padding: 40px;
+  }
+}
+
+.iconBox {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: var(--accent);
+  color: var(--primary);
+}
+
+.cellTitle {
+  margin-top: 20px;
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.cellBody {
+  margin-top: 8px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--muted-foreground);
+}

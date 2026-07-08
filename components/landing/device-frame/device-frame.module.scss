@@ -1,0 +1,32 @@
+// DeviceFrame — design-landing.md §6: soft glow behind an ink frame,
+// radii deliberately larger than any in-app radius.
+
+.wrap {
+  position: relative;
+}
+
+.glow {
+  position: absolute;
+  inset: -12px;
+  border-radius: 48px;
+  background: var(--ink-05);
+  filter: blur(40px);
+}
+
+.frame {
+  position: relative;
+  border-radius: 40px; // 2.5rem
+  background: var(--ink-90);
+  padding: 8px;
+  box-shadow: var(--shadow-device);
+}
+
+.screen {
+  overflow: hidden;
+  border-radius: 32px; // 2rem
+}
+
+.shot {
+  width: 100%;
+  height: auto;
+}

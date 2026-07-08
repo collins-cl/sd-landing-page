@@ -1,0 +1,73 @@
+/* SkillDuel landing — design tokens (master design system) */
+:root {
+  /* paper */
+  --background: hsl(40 20% 98%);
+  --background-70: hsl(40 20% 98% / 0.7);
+  /* ink */
+  --foreground: hsl(230 25% 12%);
+  --ink-05: hsl(230 25% 12% / 0.05);
+  --ink-80: hsl(230 25% 12% / 0.8);
+  --ink-90: hsl(230 25% 12% / 0.9);
+  --card: hsl(0 0% 100%);
+  --muted: hsl(230 15% 94%);
+  --muted-40: hsl(230 15% 94% / 0.4);
+  --muted-foreground: hsl(230 10% 48%);
+  /* indigo — the only chromatic color on the page */
+  --primary: hsl(234 60% 50%);
+  --accent: hsl(234 60% 95%);
+  --border: hsl(230 15% 90%);
+  --border-60: hsl(230 15% 90% / 0.6);
+
+  --shadow-device: 0 30px 80px -30px hsl(230 25% 12% / 0.35);
+  --shadow-cta: 0 10px 30px -8px hsl(234 60% 50% / 0.5);
+  --shadow-cta-hover: 0 16px 40px -8px hsl(234 60% 50% / 0.55);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: clip;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+p,
+figure {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}

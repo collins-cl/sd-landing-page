@@ -1,0 +1,54 @@
+@use "../shared" as *;
+
+// "The stage" editorial trio — §7.7. Muted band, three phones side-by-side,
+// middle phone raised for editorial rhythm.
+
+.section {
+  border-top: 1px solid var(--border);
+  background: var(--muted-40);
+  padding-block: 80px;
+
+  @include md {
+    padding-block: 112px;
+  }
+}
+
+.inner {
+  @include container;
+}
+
+.overline {
+  @include overline;
+}
+
+.title {
+  @include section-h2;
+  margin-top: 16px;
+}
+
+.grid {
+  margin-top: 56px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+
+  @include md {
+    margin-top: 80px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+}
+
+.offset {
+  @include md {
+    transform: translateY(-24px);
+  }
+}
+
+.caption {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted-foreground);
+}

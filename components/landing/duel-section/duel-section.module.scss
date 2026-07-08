@@ -1,0 +1,78 @@
+@use "../shared" as *;
+
+// "The duel" editorial section — §7.5. Muted band, copy left, phone right.
+
+.section {
+  border-top: 1px solid var(--border);
+  background: var(--muted-40);
+  padding-block: 80px;
+
+  @include md {
+    padding-block: 112px;
+  }
+}
+
+.inner {
+  @include container;
+  display: grid;
+  align-items: center;
+  gap: 56px;
+
+  @include md {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+}
+
+.overline {
+  @include overline;
+}
+
+.title {
+  @include section-h2;
+  margin-top: 16px;
+}
+
+.lead {
+  @include lead;
+  margin-top: 24px;
+}
+
+.checklist {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.checkItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.checkDot {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--accent);
+
+  span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--primary);
+  }
+}
+
+.phone {
+  justify-self: center;
+  width: 100%;
+  max-width: 320px;
+}

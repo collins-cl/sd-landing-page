@@ -1,0 +1,49 @@
+// Shared layout + type mixins for the landing sections.
+// Values come from design-landing.md §4 (type scale) and §10 (responsive rules).
+
+@mixin md {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin container {
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: 20px;
+
+  @include md {
+    padding-inline: 40px;
+  }
+}
+
+@mixin overline {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--primary);
+}
+
+@mixin section-h2 {
+  font-size: 32px;
+  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+
+  @include md {
+    font-size: 52px;
+    line-height: 1.02;
+  }
+}
+
+@mixin lead {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--muted-foreground);
+  max-width: 32rem;
+
+  @include md {
+    font-size: 19px;
+  }
+}
