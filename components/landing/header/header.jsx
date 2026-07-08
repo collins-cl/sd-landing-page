@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { ArrowRight, Swords } from "lucide-react";
+import Link from "next/link";
 import styles from "./header.module.scss";
 
 export function Header() {
@@ -12,7 +12,10 @@ export function Header() {
           </span>
           <span className={styles.name}>SkillDuel</span>
         </div>
-        <Link href="/auth" className={styles.signup}>
+        <Link
+          href="https://skill-duel-tau.vercel.app/auth"
+          className={styles.signup}
+        >
           Sign up
           <ArrowRight className={styles.arrow} size={14} strokeWidth={2} />
         </Link>
