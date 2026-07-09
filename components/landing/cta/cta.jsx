@@ -5,7 +5,7 @@ import styles from "./cta.module.scss";
 export function PrimaryCta({ children }) {
   return (
     <Link
-      href="https://skill-duel-tau.vercel.app/auth"
+      href="https://app.skillduel.app/auth?next=%2F"
       className={styles.primary}
     >
       {children}
@@ -17,7 +17,7 @@ export function PrimaryCta({ children }) {
 export function SecondaryCta({ children, icon }) {
   return (
     <Link
-      href="https://skill-duel-tau.vercel.app/duel/topic"
+      href="https://app.skillduel.app/duel/topic"
       className={styles.secondary}
     >
       {icon}

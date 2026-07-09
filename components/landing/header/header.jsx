@@ -13,7 +13,7 @@ export function Header() {
           <span className={styles.name}>SkillDuel</span>
         </div>
         <Link
-          href="https://skill-duel-tau.vercel.app/auth"
+          href="https://app.skillduel.app/auth?next=%2F"
           className={styles.signup}
         >
           Sign up
