@@ -13,6 +13,8 @@ export function Header() {
           <span className={styles.name}>SkillDuel</span>
         </div>
         <Link
+          target="_blank"
+          rel="noopener noreferrer"
           href="https://app.skillduel.app/auth?next=%2F"
           className={styles.signup}
         >
