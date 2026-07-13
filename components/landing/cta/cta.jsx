@@ -6,6 +6,8 @@ export function PrimaryCta({ children }) {
   return (
     <Link
       href="https://app.skillduel.app/auth?next=%2F"
+      target="_blank"
+      rel="noopener noreferrer"
       className={styles.primary}
     >
       {children}
@@ -18,6 +20,8 @@ export function SecondaryCta({ children, icon }) {
   return (
     <Link
       href="https://app.skillduel.app/duel/topic"
+      target="_blank"
+      rel="noopener noreferrer"
       className={styles.secondary}
     >
       {icon}
